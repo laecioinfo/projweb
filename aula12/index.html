@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript">
+        function mostravalor(componente){
+            var valor = componente.getAttribute('data-idade');
+            alert(valor);
+        }
+    </script>
+    <meta charset="UTF-8">
+<title>Atributo Data</title>
+<style>
+    .pessoa{
+        color: red
+    }
+    .pessoa [data-cpf="20"]{
+        color: blue
+    }
+    .pessoa::before{
+        content: 'Nome: '
+    }
+
+</style>
+</head>
+
+<body>
+
+    <ul>
+        <li class="pessoa" onclick="mostravalor(this)" data-idade="20" data-cpf="012.345.678-90">João</li>
+        <li class="pessoa" onclick="mostravalor(this)" data-idade="30" data-cpf="098.765.432-10">José</li>
+        <li class="pessoa" onclick="mostravalor(this)" data-idade="40" data-cpf="122.233.344-45">Maria</li>
+    </ul>
+
+    <script>
+        var liElements = document.querySelectorAll('.pessoa');
+        liElements.forEach(function(liElement) {
+            var idade = liElement.getAttribute('data-idade');
+            var cpf = liElement.getAttribute('data-cpf');
+            liElement.textContent = liElement.textContent + ' - Idade: ' + idade + ', CPF: ' + cpf;
+        });
+    </script>
+
+</body>
+</html>
