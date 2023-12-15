@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  
+  <style>
+    @keyframes rotacao {
+      0% {
+        transform: rotate(0deg);
+        background-color: red;
+      }
+      25% {
+        transform: rotate(90deg);
+        background-color: blue;
+      }
+      50% {
+        transform: rotate(180deg);
+        background-color: green;
+      }
+      75% {
+        transform: rotate(270deg);
+        background-color: yellow;
+      }
+      100% {
+        transform: rotate(360deg);
+        background-color: red;
+      }
+    }
+
+    .rota-box {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      animation: rotacao 10s infinite;
+    }
+  </style>
+</head>
+<body>
+  <div class="rota-box"></div>
+</body>
+</html>
