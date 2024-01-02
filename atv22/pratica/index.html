@@ -1,0 +1,38 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Raiz Quadrada</title>
+    <script type="text/javascript">
+        function RaizQuadrada(numero) {
+            const raizQuadrada = Math.sqrt(numero);
+            alert(`A raiz quadrada de ${numero} é: ${raizQuadrada}`);
+        }
+    </script>
+
+<script type="text/javascript">
+function escreve(){
+    var texto = prompt("Digite...");
+    document.getElementById("minhaDiv").innerHTML = texto;
+}
+
+
+
+</script>
+</head>
+<body>
+    <h1>Resultados das Raízes Quadradas</h1>
+    <p><a href="#" onclick="RaizQuadrada(25)">Calcular raiz quadrada de 25</a></p>
+    <p><a href="#" onclick="RaizQuadrada(36)">Calcular raiz quadrada de 36</a></p>
+    <p><a href="#" onclick="RaizQuadrada(49)">Calcular raiz quadrada de 49</a></p>
+
+
+    <h1>Texto dinâmico</h1>
+<a href="javascript:escreve()">Escreve</a><br>
+
+<div id="minhaDiv">
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,179 @@
+<html >
+<head>
+  <meta charset="utf-8">
+  <title>Página para Pedidos</title>
+  <meta name="viewport">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+</head>
+
+<body class="bg-success">
+  <main class="container-fluid">
+    <nav class="navbar navbar-expand justify-content-between bg-white my-1">
+      <button type="button" class="btn btn-info text-white"><i class="fas fa-clock"></i>Pedidos recentes</button>
+      <button type="button" class="btn btn-info text-white"><i class="fas fa-envelope"></i>Enviar cliente</button>
+      <button type="button" class="btn btn-info text-white"><i class="fas fa-heart"></i>Receber pagamentos</button>
+      <button type="button" class="btn btn-info text-white"><i class="fas fa-clipboard"></i>Todos os pedidos</button>
+      <button type="button" class="btn btn-info text-white"><i class="fas fa-user"></i>Novo pedido</button>
+      <button type="button" class="btn btn-info text-white"><i class="fas fa-house"></i>Página inicial</button>
+    </nav>
+
+    <div class="container-fluid bg-white">
+      <h4>Pesquisa de Produtos</h4>
+      <h6>Descrição</h6>
+      <input type="text" size="43"><br><br>
+
+      <div>
+        <button type="button" class="btn btn-info text-white"><i class="fas fa-search"></i>Pesquisar</button>
+        <button type="button" class="btn btn-info text-white"><i class="fas fa-refresh"></i>Recarregar</button>
+        <button data-bs-toggle="modal" data-bs-target="#item" type="button" class="btn btn-info text-white"><i class="fa-regular fa-file"></i>Novo</button>
+        <div class="modal" id="item">
+            <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h4>Novo pedido</h4>
+                </div>
+                  <form>
+                        <input type="text" size="30" placeholder="Nome do pedido">
+                        <input type="text" size="20" placeholder="R$"><br><BR>
+                      <select>
+                        <option selected>Escolha o livro</option>
+                        <option>Matemática</option>
+                        <option>Lingua Portuguesa</option>
+                        <option>Inglês</option>
+                        <option>História</option>
+                        <option>Geografia</option>
+                        <option>Caligrafia</option>
+                      </select>
+                      <select>
+                        <option selected>Situação</option>
+                        <option>Disponível</option>
+                        <option>Indisponível</option>
+                      </select>
+                        <button>Enviar</button>
+                  </form>
+                </div>
+            </div>
+            </div>
+      
+        <div>
+          <select><option selected>10</option></select>
+          <span>Registros por página</span>
+        </div>
+       
+    </div>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Descrição</th>
+          <th>Situação</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th >1</th>
+          <td>Livro de Inglês - Editora Ática</td>
+          <td>
+            <span class="badge bg-success">Disponível</a>
+          </td>
+          <td>
+            <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalhes"><i class="fa-regular fa-clipboard"></i></button>
+            <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class="fa-solid fa-edit"></i></button>
+            <button type="button" class="btn btn-light btn-sm" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="focus" data-bs-content="Deseja realmente remover esse registro? ( )SIM (X)NÃO" title="Remover"><i class="fa-solid fa-trash"></i></button>
+          </td>
+        </tr>
+
+        <tr>
+          <th>2</th>
+          <td>Livro de Matemática Coleção Ápis</td>
+          <td><span class="badge bg-secondary">Indisponível</a></td>
+            <td>
+                <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalhes"><i class="fa-regular fa-clipboard"></i></button>
+                <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class="fa-solid fa-edit"></i></button>
+                <button type="button" class="btn btn-light btn-sm" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="focus" data-bs-content="Deseja realmente remover esse registro? ( )SIM (X)NÃO" title="Remover"><i class="fa-solid fa-trash"></i></button>
+              </td>
+        </tr>
+
+        <tr>
+            <th>3</th>
+            <td>Livro de Geografia Portas Abertas</td>
+            <td><span class="badge bg-success">Disponível</a></td>
+              <td>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalhes"><i class="fa-regular fa-clipboard"></i></button>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class="fa-solid fa-edit"></i></button>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="focus" data-bs-content="Deseja realmente remover esse registro? ( )SIM (X)NÃO" title="Remover"><i class="fa-solid fa-trash"></i></button>
+                </td>
+          </tr>
+
+          <tr>
+            <th>4</th>
+            <td>Livro de História Portas Abertas</td>
+            <td><span class="badge bg-success">Disponível</a></td>
+              <td>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalhes"><i class="fa-regular fa-clipboard"></i></button>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class="fa-solid fa-edit"></i></button>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="focus" data-bs-content="Deseja realmente remover esse registro? ( )SIM (X)NÃO" title="Remover"><i class="fa-solid fa-trash"></i></button>
+                </td>
+          </tr>
+
+          <tr>
+            <th>5</th>
+            <td>Livro de Caligrafia ZigueZague</td>
+            <td><span class="badge bg-success">Disponível</a></td>
+              <td>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalhes"><i class="fa-regular fa-clipboard"></i></button>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class="fa-solid fa-edit"></i></button>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="focus" data-bs-content="Deseja realmente remover esse registro? ( )SIM (X)NÃO" title="Remover"><i class="fa-solid fa-trash"></i></button>
+                </td>
+          </tr>
+
+          <tr>
+            <th>6</th>
+            <td>Livro de Religião Marcha Criança</td>
+            <td><span class="badge bg-success">Disponível</a></td>
+              <td>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalhes"><i class="fa-regular fa-clipboard"></i></button>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class="fa-solid fa-edit"></i></button>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="focus" data-bs-content="Deseja realmente remover esse registro? ( )SIM (X)NÃO" title="Remover"><i class="fa-solid fa-trash"></i></button>
+                </td>
+          </tr>
+
+          <tr>
+            <th>7</th>
+            <td>Livro de Informática Básica</td>
+            <td><span class="badge bg-secondary">Indisponível</a></td>
+              <td>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalhes"><i class="fa-regular fa-clipboard"></i></button>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class="fa-solid fa-edit"></i></button>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="focus" data-bs-content="Deseja realmente remover esse registro? ( )SIM (X)NÃO" title="Remover"><i class="fa-solid fa-trash"></i></button>
+                </td>
+          </tr>
+
+          <tr>
+            <th>8</th>
+            <td>Livro de Espanhol - Colores del vol. 2</td>
+            <td><span class="badge bg-success">Disponível</a></td>
+              <td>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Ver Detalhes"><i class="fa-regular fa-clipboard"></i></button>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="tooltip" data-bs-placement="top" title="Editar"><i class="fa-solid fa-edit"></i></button>
+                  <button type="button" class="btn btn-light btn-sm" data-bs-toggle="popover" data-bs-placement="right" data-bs-trigger="focus" data-bs-content="Deseja realmente remover esse registro? ( )SIM (X)NÃO" title="Remover"><i class="fa-solid fa-trash"></i></button>
+                </td>
+          </tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript">
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+      return new bootstrap.Tooltip(tooltipTriggerEl)
+    })
+    var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+    var popoverList = popoverTriggerList.map(function (popoverTriggerEl) {
+      return new bootstrap.Popover(popoverTriggerEl)
+    })
+  </script>
+</html>
